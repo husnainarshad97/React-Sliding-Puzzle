@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  background-image: url(./nstp.jpg);
+  background-size: cover;
+  color: white;
+  width: 100%;
+  background-position: center;
+  position:relative;
+  overflow-x:hidden;
+  overflow-y:hidden;
+
+}
+
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.App {
+  height: 100vh;
+}
+
+#onediv{
+  place-items: center;
+  display: grid;
+
+}
+#seconddiv{
+  padding-bottom: 1000;
+  display: grid;
+}
+h2 {
+  margin: 0;
+  place-items: center;
+
+}
+.board {
+  position: relative;
+  place-items: center;
+
+  padding: 0;
+}
+.tile {
+  position: absolute;
+  list-style: none;
+  background: #ec6f66;
+  display: grid;
+  place-items: center;
+  font-size: 1.25rem;
+}
+button {
+  display: block;
+  place-items: center;
+
+}
+
+.highway{
+  height:13rem;
+  width:10000%;
+  display:block;
+  background-image:url("./highway.jpg");
+  position :absolute;
+  left:0;
+  right:0;
+  bottom:-170px;
+  z-index:1;
+  background-repeat: repeat-x;
+  animation: highway 5s linear infinite;
+  }
+  @keyframes highway{
+  100%{
+  transform: translateX(-3400px);
+  }
+  }
+
+  .car{
+    width:400px;
+    left: 50%;
+    bottom: 0px;
+    transform: translateX(-50%);
+    position: absolute;
+    z-index:2;
+    place-items: center;
+    }
+
+    .car img{
+      animation : car 1s linear infinite;
+  }
+  
+  @keyframes car{
+      100%{
+          transform: translateY(-1px);
+      }
+      
+      50% {
+          transform: translateY(1px);
+      }
+      
+      0%{
+      transform: translateY(-1px);
+      }
+      }
+
+      .wheel
+      {
+  left: 28%;
+  bottom: 90px;
+  transform: translateX(-50%);
+  position: absolute;
+  z-index:2;
+      }
+      
+      .wheel img{
+          height: 60px;
+          width: 60px;
+          animation: wheel 1s linear infinite;
+         
+      }
+      .left{
+          position: absolute;
+          left: -101px;
+          bottom: -87px;
+      }
+      .right{
+          position: absolute;
+          left: -2px;
+          bottom: -87px;
+
+      }
+  
+      @keyframes wheel{
+          100%{
+              transform: rotate(360deg);
+          }
+      }
